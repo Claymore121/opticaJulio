@@ -18,12 +18,12 @@ export const Navbar = () => {
   const closeMenu = () => setIsOpen(false)
 
   return (
-    <header className="w-full bg-white shadow-xs sticky top-0 z-50">
+    <header className="w-full bg-white shadow-xs fixed top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          {/* Logo */}
+          
           <div className="flex-shrink-0 flex items-center">
-            <span className="text-xl font-bold text-slate-900">Óptica</span>
+            <span className="text-xl font-bold text-slate-900">Óptica Aguilas</span>
           </div>
 
           {/* Desktop Navigation */}

@@ -6,17 +6,26 @@ import Services from './components/sections/Services'
 import Catalog from './components/sections/Catalog'
 import About from './components/sections/About'
 import Contact from './components/sections/Contact'
+import ScrollReveal from './components/ui/ScrollReveal'
 
 export const App = () => {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col font-sans">
+    <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col font-sans overflow-x-hidden">
       <Navbar />
-      <main className="flex-grow">
-        <Hero />
+      <main className="flex-grow pt-16">
+        <ScrollReveal>
+          <Hero />
+        </ScrollReveal>
         <Services />
-        <Catalog />
-        <About />
-        <Contact />
+        <ScrollReveal>
+          <Catalog />
+        </ScrollReveal>
+        <ScrollReveal>
+          <About />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Contact />
+        </ScrollReveal>
       </main>
       <Footer />
     </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import ScrollReveal from '../ui/ScrollReveal'
 
 export const Services = () => {
   return (
@@ -13,19 +14,21 @@ export const Services = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[1, 2, 3].map((item) => (
-            <div key={item} className="p-6 border border-slate-200 rounded-xl hover:shadow-md transition">
-              <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-slate-900 font-bold">{item}</span>
+        <ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[1, 2, 3].map((item) => (
+              <div key={item} className="p-6 border border-slate-200 rounded-xl hover:shadow-md transition">
+                <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-slate-900 font-bold">{item}</span>
+                </div>
+                <h3 className="text-xl font-semibold text-slate-950 mb-2">Servicio {item}</h3>
+                <p className="text-slate-600 text-sm">
+                  Descripción básica del servicio ofrecido. Espacio para detalles del servicio {item}.
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-slate-950 mb-2">Servicio {item}</h3>
-              <p className="text-slate-600 text-sm">
-                Descripción básica del servicio ofrecido. Espacio para detalles del servicio {item}.
-              </p>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   )
